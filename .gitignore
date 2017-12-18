@@ -1,0 +1,17 @@
+# Dot-hidden on Unix-like systems
+.waf-*-*/
+.waf3-*-*/
+
+# Hidden directory on Windows (no dot)
+waf-*-*/
+waf3-*-*/
+
+# Lockfile
+.lock-waf_*_build
+
+# Build output
+build/
+
+# Compiled python code
+*.pyc
+*.pyo
