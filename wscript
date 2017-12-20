@@ -12,15 +12,12 @@ out = 'build'
 
 def options(opt):
     opt.load('compiler_cxx')
-    opt.load('default-compiler-flags boost cryptopp openssl',
+    opt.load('default-compiler-flags boost cryptopp',
              tooldir='.waf-tools')
 
 
 def configure(conf):
-    conf.load('compiler_cxx default-compiler-flags boost cryptopp openssl')
-
-    conf.check_cfg(package='libndn-cxx', args=['--cflags', '--libs'],
-                   uselib_store='NDN_CXX', mandatory=True)
+    conf.load('compiler_cxx default-compiler-flags boost cryptopp')
 
     conf.check_cryptopp()
 
